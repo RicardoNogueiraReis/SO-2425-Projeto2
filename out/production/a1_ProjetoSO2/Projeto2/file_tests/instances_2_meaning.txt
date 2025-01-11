@@ -1,0 +1,21 @@
+# Linha 1
+    3 3 - Uma linha com o número de avenidas e o número de ruas, M e N;
+    M = 3 (avenidas)
+    N = 3 (ruas)
+
+# Linha 2
+    2 2 - Uma linha com o número de supermercados e o número de cidadãos, S e C;
+    S = 2 (Supermercados)
+    C = 2 (Cidadãos)
+
+# Linha 3 a 4, inclusive
+    # S = 2 (Supermercados)
+    # Coordenadas dos respetivos supermercados
+    3 2
+    3 3
+
+# Linha 5 a 6, inclusive
+    C = 2 (Cidadãos)
+    # Coordenadas dos respetivos cidadãos
+    1 1
+    2 2
