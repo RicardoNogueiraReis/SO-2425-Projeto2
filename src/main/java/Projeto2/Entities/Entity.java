@@ -1,4 +1,4 @@
-package Projeto2.src.Entities;
+package Projeto2.Entities;
 
 public class Entity {
     private int id;

@@ -1,9 +1,14 @@
-package Projeto2.src;
+package Projeto2;
 
-import Projeto2.src.Entities.*;
+import Projeto2.Entities.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import com.brunomnsilva.smartgraph.graph.Edge;
+import com.brunomnsilva.smartgraph.graph.Graph;
+import com.brunomnsilva.smartgraph.graph.Vertex;
+import com.brunomnsilva.smartgraph.graph.GraphEdgeList;
 
 public class Main {
     public static void main(String[] args) throws IOException {

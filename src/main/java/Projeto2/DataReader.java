@@ -1,8 +1,7 @@
-package Projeto2.src;
+package Projeto2;
 
-import Projeto2.src.Entities.Cidadao;
-import Projeto2.src.Entities.Entity;
-import Projeto2.src.Entities.Supermercado;
+import Projeto2.Entities.Cidadao;
+import Projeto2.Entities.Supermercado;
 
 import java.io.*;
 import java.util.ArrayList;

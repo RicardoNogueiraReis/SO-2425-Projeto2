@@ -1,4 +1,4 @@
-package Projeto2.src.Entities;
+package Projeto2.Entities;
 
 public class Cidadao extends Entity {
     private boolean chegouSupermercado;

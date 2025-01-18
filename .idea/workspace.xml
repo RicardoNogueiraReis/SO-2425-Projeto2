@@ -5,12 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7af7efc-dd2e-40f7-b2f6-49bfdd9a0584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Projeto2/src/DataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projeto2/src/Entities/Cidadao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projeto2/src/Entities/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projeto2/src/Entities/Supermercado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/FindSolutionCitizenBS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/Projeto2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Projeto2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_100.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_100.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_125.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_125.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_14.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_150.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_150.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_20.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_200.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_200.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_25.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_2_meaning.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_2_meaning.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_40.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_40.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_50.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_50.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/instances_75.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_75.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/file_tests/results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/src/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/DataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/src/Entities/Cidadao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Cidadao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/src/Entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/src/Entities/Supermercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Supermercado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projeto2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +52,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rafas1610&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RicardoNogueiraReis/SO-2425-Projeto2.git&quot;,
+    &quot;accountId&quot;: &quot;1fd46deb-5fc7-4d97-869c-a9ff8afce359&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -46,31 +83,24 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricardo/Desktop/a1_ProjetoSO2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rafae/Desktop/IPS_LEI/2º Ano/SO/Projeto/2ª Fase/SO-2425-Projeto2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\Desktop\IPS_LEI\2º Ano\SO\Projeto\2ª Fase\SO-2425-Projeto2\src\main\java" />
       <recent name="C:\Users\ricardo\Desktop\a1_ProjetoSO2\Projeto2\src" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
