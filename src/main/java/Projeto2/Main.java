@@ -13,28 +13,30 @@ import com.brunomnsilva.smartgraph.graph.GraphEdgeList;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        /* TODO:
-        * Estrutura das classes para representar Esquina e Cidadão
-        * Classe para leitura de ficheiros
-        * */
 
-        /*
-        Entity cidadao1 = new Cidadao(1, 1);
-        Entity cidadao2 = new Cidadao(1, 2);
-        Entity cidadao3 = new Cidadao(1, 3);
+        /* Leitura de parâmetros */
+        /* +++++++++++++++++++++ */
 
-        System.out.println(cidadao1);
-        System.out.println(cidadao3);
-        System.out.println(cidadao2);
+        Parameters params = new Parameters();
 
-        Entity supermercado1 = new Supermercado(1, 1);
-        Entity supermercado2 = new Supermercado(1, 2);
-        Entity supermercado3 = new Supermercado(1, 3);
+        try {
+            params.setNomeFicheiro(args[0]);
+            params.setLarguraFeixe(args[1]);
 
-        System.out.println(supermercado1);
-        System.out.println(supermercado2);
-        System.out.println(supermercado3);
-        */
+            params.setNumThreads(args[2]);
+            params.setMilisegundos(args[3]);
+
+            params.setIteracoesThread(args[4]);
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+
+        }
+
+        System.out.println(params);
+
+        /* Leitura de ficheiros */
+        /* ++++++++++++++++++++ */
 
         ArrayList<Supermercado> supermercados = new ArrayList<>();
         ArrayList<Cidadao> cidadaos = new ArrayList<>();
@@ -45,11 +47,19 @@ public class Main {
         } catch (IOException e) {
             System.out.println(e.getMessage());
             return;
+
         }
+
+
+        /* Resultados da leitura de ficheiros */
+        /* ++++++++++++++++++++++++++++++++++ */
 
         for (Supermercado supermercado : supermercados) {
             System.out.println(supermercado);
+
         }
+
+        System.out.println("");
 
         for (Cidadao cidadao : cidadaos) {
             System.out.println(cidadao);

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class DataReader {
 
-    String PATH_TO_FILE = "Projeto2/file_tests/";
+    private String PATH_TO_FILE = "file_tests/";
 
     private int avenidas;
     private int ruas;
@@ -31,7 +31,9 @@ public class DataReader {
         try{
             File file = new File(PATH_TO_FILE + fileName);
 
-            //System.out.println("Caminho absoluto: " + file.getAbsolutePath());
+            // System.out.println("Reading file: " + PATH_TO_FILE);
+
+            // System.out.println("Caminho absoluto: " + file.getAbsolutePath());
 
             BufferedReader br = new BufferedReader(new FileReader(file));
 
@@ -49,8 +51,11 @@ public class DataReader {
             readCidadaos(br);
 
         }
-        catch(IOException e) {
-            throw new RuntimeException(e);
+        catch(NullPointerException e1) {
+            throw new RuntimeException("ERRO: Ficheiro não encontrado.");
+        }
+        catch(IOException e2) {
+            throw new RuntimeException("ERRO: Não é possível ler o ficheiro.");
         }
     }
 
