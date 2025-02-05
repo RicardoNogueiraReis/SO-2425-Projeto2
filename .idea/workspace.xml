@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7af7efc-dd2e-40f7-b2f6-49bfdd9a0584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Parameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/BeamSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Cruzamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enunciado_projeto_SO_f2_2024_25.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/FindSolutionCitizenBS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/FindSolutionCitizenBS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/FindSolutionCitizenBS.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/DataReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_100.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_125.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_25.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_2_meaning.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_30.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_40.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/instances_75.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/file_tests/results.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +68,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -94,10 +79,10 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Projeto2.Main" />
       <module name="SO-2425-Projeto2" />
-      <option name="PROGRAM_PARAMETERS" value="instances_25.txt 500 10 10000 20" />
+      <option name="PROGRAM_PARAMETERS" value="instances_2.txt 500 10 10000 20" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,6 +114,8 @@
       <workItem from="1738685918191" duration="1447000" />
       <workItem from="1738687485823" duration="4690000" />
       <workItem from="1738692850110" duration="311000" />
+      <workItem from="1738767658461" duration="117000" />
+      <workItem from="1738767783452" duration="7946000" />
     </task>
     <servers />
   </component>

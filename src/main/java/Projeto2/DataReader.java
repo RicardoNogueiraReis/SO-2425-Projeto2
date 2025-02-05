@@ -88,4 +88,20 @@ public class DataReader {
     public ArrayList<Cidadao> getCidadaos() {
         return cidadaos;
     }
+
+    public int getAvenidas() {
+        return avenidas;
+    }
+
+    public int getRuas() {
+        return ruas;
+    }
+
+    public int getNumSupermercados() {
+        return numSupermercados;
+    }
+
+    public int getNumCidadaos() {
+        return numCidadaos;
+    }
 }
