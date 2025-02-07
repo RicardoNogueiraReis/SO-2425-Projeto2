@@ -34,6 +34,7 @@ public class Parameters {
     }
 
     public void setNomeFicheiro(String nomeFicheiro) throws IOException {
+
         if(nomeFicheiro.isEmpty()) {
             throw new IOException("ERRO: Nome do ficheiro em falta.");
 
@@ -58,7 +59,7 @@ public class Parameters {
 
         this.numThreads = Integer.parseInt(numThreads);
 
-         if (this.numThreads <= 0) {
+        if (this.numThreads <= 0) {
             throw new IOException("ERRO: Número de threads não pode ser menor ou igual a zero.");
 
         }

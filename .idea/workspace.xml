@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7af7efc-dd2e-40f7-b2f6-49bfdd9a0584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/BeamSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Cruzamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/FindSolutionCitizenBS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/DataReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Parameters.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,9 @@
       <workItem from="1738687485823" duration="4690000" />
       <workItem from="1738692850110" duration="311000" />
       <workItem from="1738767658461" duration="117000" />
-      <workItem from="1738767783452" duration="7946000" />
+      <workItem from="1738767783452" duration="8829000" />
+      <workItem from="1738941486260" duration="1212000" />
+      <workItem from="1738943022761" duration="2783000" />
     </task>
     <servers />
   </component>
