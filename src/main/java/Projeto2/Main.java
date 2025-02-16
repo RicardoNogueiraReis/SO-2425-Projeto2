@@ -1,5 +1,6 @@
 package Projeto2;
 
+import Projeto2.Algorithm.BeamSearch;
 import Projeto2.Entities.*;
 
 import java.io.IOException;
@@ -37,38 +38,69 @@ public class Main {
         /* Leitura de ficheiros */
         /* ++++++++++++++++++++ */
 
-        ArrayList<Supermercado> supermercados = new ArrayList<>();
         ArrayList<Cidadao> cidadaos = new ArrayList<>();
+        ArrayList<Supermercado> supermercados = new ArrayList<>();
 
         DataReader dataReader;
 
-        try {
-            dataReader = new DataReader(params.getNomeFicheiro(), supermercados, cidadaos);
-
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-            return;
-
-        }
+        dataReader = new DataReader(params.getNomeFicheiro(), supermercados, cidadaos);
 
         Graph<Cruzamento, Integer> cruzamentos = new GraphEdgeList<>();;
 
-        createCruzamentos( cruzamentos, dataReader.getAvenidas(), dataReader.getRuas() );
+        createCruzamentos( cruzamentos, dataReader.getAvenidas(), dataReader.getRuas(), cidadaos, supermercados);
 
-        mostrarVizinhos(cruzamentos);
+        //mostrarVizinhos(cruzamentos);
 
+        // Mostrar as entidades nos cruzamentos
+        mostrarEntidadesNosCruzamentos(cruzamentos);
+        System.out.println();
+
+        /* Algoritmo */
+
+        BeamSearch beamSearch = new BeamSearch(params.getLarguraFeixe(), cruzamentos, params.getMilisegundos(), cidadaos, supermercados);
+
+        Solution solution = beamSearch.Find_Solution_Citizen_BS();
+
+        System.out.println(solution);
 
     }
 
-    private static void createCruzamentos(Graph<Cruzamento, Integer> cruzamentos, int numberOfAvenidas, int numberOfRuas) {
+    private static void createCruzamentos(Graph<Cruzamento, Integer> cruzamentos,
+                                          int numberOfAvenidas, int numberOfRuas,
+                                          ArrayList<Cidadao> cidadaos,
+                                          ArrayList<Supermercado> supermercados) {
         Map<String, Vertex<Cruzamento>> cruzamentoMap = new HashMap<>();
 
         // Criar cruzamentos
         for (int avenida = 1; avenida <= numberOfAvenidas; avenida++) {
             for (int rua = 1; rua <= numberOfRuas; rua++) {
+
                 Cruzamento cruzamento = new Cruzamento(avenida, rua);
                 Vertex<Cruzamento> v = cruzamentos.insertVertex(cruzamento);
+
                 cruzamentoMap.put(avenida + "," + rua, v);
+            }
+        }
+
+        // Associar cidadãos aos cruzamentos correspondentes
+        for (Cidadao c : cidadaos) {
+
+            String chave = c.getAvenida() + "," + c.getRua();
+
+            if (cruzamentoMap.containsKey(chave)) {
+                cruzamentoMap.get(chave).element().adicionarCidadao(c);
+
+            }
+        }
+
+        // Associar supermercados aos cruzamentos correspondentes
+        for (Supermercado s : supermercados) {
+
+            String chave = s.getAvenida() + "," + s.getRua();
+
+            if (cruzamentoMap.containsKey(chave)) {
+                cruzamentoMap.get(chave).element().adicionarSupermercado(s);
+
             }
         }
 
@@ -76,41 +108,55 @@ public class Main {
 
         // Criar ligações entre cruzamentos adjacentes
         for (Vertex<Cruzamento> v : cruzamentos.vertices()) {
+
             Cruzamento node = v.element();
+
             int av = node.getAvenida();
             int ru = node.getRua();
 
             // Norte
             if (av > 1) {
                 Vertex<Cruzamento> vizinhoNorte = cruzamentoMap.get((av - 1) + "," + ru);
+
                 if (vizinhoNorte != null && !cruzamentos.areAdjacent(v, vizinhoNorte)) {
                     cruzamentos.insertEdge(v, vizinhoNorte, ++edge);
+
                 }
+
             }
 
             // Sul
             if (av < numberOfAvenidas) {
                 Vertex<Cruzamento> vizinhoSul = cruzamentoMap.get((av + 1) + "," + ru);
+
                 if (vizinhoSul != null && !cruzamentos.areAdjacent(v, vizinhoSul)) {
                     cruzamentos.insertEdge(v, vizinhoSul, ++edge);
+
                 }
+
             }
 
             // Este
             if (ru < numberOfRuas) {
                 Vertex<Cruzamento> vizinhoEste = cruzamentoMap.get(av + "," + (ru + 1));
+
                 if (vizinhoEste != null && !cruzamentos.areAdjacent(v, vizinhoEste)) {
                     cruzamentos.insertEdge(v, vizinhoEste, ++edge);
+
                 }
+
             }
 
             // Oeste
             if (ru > 1) {
                 Vertex<Cruzamento> vizinhoOeste = cruzamentoMap.get(av + "," + (ru - 1));
+
                 if (vizinhoOeste != null && !cruzamentos.areAdjacent(v, vizinhoOeste)) {
                     cruzamentos.insertEdge(v, vizinhoOeste, ++edge);
+
                 }
             }
+
         }
     }
 
@@ -121,7 +167,6 @@ public class Main {
             System.out.println("Nó (" + node.getAvenida() + "," + node.getRua() + "):");
 
             for (Edge<Integer, Cruzamento> edge : cruzamentos.incidentEdges(v)) {
-
 
                 Vertex<Cruzamento>[] vertices = edge.vertices();
                 Vertex<Cruzamento> vizinho = (vertices[0] == v) ? vertices[1] : vertices[0];
@@ -155,7 +200,24 @@ public class Main {
         return "Nó desconhecido";
     }
 
+    public static void mostrarEntidadesNosCruzamentos(Graph<Cruzamento, Integer> cruzamentos) {
+
+        for (Vertex<Cruzamento> v : cruzamentos.vertices()) {
+
+            // Cruzamento atual
+            Cruzamento cruzamento = v.element();
+
+            ArrayList<Cidadao> cidadaos = cruzamento.getCidadaos();
+            ArrayList<Supermercado> supermercados = cruzamento.getSupermercados();
 
 
+            if (!cidadaos.isEmpty() || !supermercados.isEmpty()) {
+                System.out.println("Cruzamento (" + cruzamento.getAvenida() + "," + cruzamento.getRua() + ") - " +
+                        "Cidadãos: " + cidadaos.size() + ", Supermercados: " + supermercados.size());
+
+            }
+
+        }
+    }
 
 }

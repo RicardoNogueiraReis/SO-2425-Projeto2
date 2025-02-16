@@ -5,7 +5,7 @@ public class Supermercado extends Entity {
     private static int totalSupermercados;
 
     public Supermercado(int id, int avenida, int rua) {
-        super(id, avenida, rua);
+        super(avenida, rua);
         this.ocupado = false;
 
     }
@@ -33,6 +33,6 @@ public class Supermercado extends Entity {
 
     @Override
     public String toString() {
-        return "Supermercado " + getId() + " | Avenida: " + getAvenida() + " | Rua: " + getRua() + " | Ocupado? " + ocupado;
+        return "Supermercado -> Avenida: " + getAvenida() + " | Rua: " + getRua() + " | Ocupado? " + ocupado;
     }
 }

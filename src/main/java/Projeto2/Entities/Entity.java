@@ -1,18 +1,12 @@
 package Projeto2.Entities;
 
-public class Entity {
-    private int id;
+public abstract class Entity {
     private int avenida;
     private int rua;
 
-    public Entity(int id, int avenida, int rua) {
-        this.id = id;
+    public Entity(int avenida, int rua) {
         this.avenida = avenida;
         this.rua = rua;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public int getAvenida() {
@@ -21,10 +15,6 @@ public class Entity {
 
     public int getRua() {
         return rua;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void setAvenida(int avenida) {
