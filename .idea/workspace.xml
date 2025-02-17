@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7af7efc-dd2e-40f7-b2f6-49bfdd9a0584" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/BeamSearchThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/BeamSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/BeamSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/DataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Cidadao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Cidadao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Cruzamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Cruzamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Supermercado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Entities/Supermercado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Projeto2/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Projeto2/Parameters.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +86,7 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Projeto2.Main" />
       <module name="SO-2425-Projeto2" />
-      <option name="PROGRAM_PARAMETERS" value="instances_2.txt 500 10 10000 20" />
+      <option name="PROGRAM_PARAMETERS" value="instances_7.txt 500 10 10000 20" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,11 +121,33 @@
       <workItem from="1738767658461" duration="117000" />
       <workItem from="1738767783452" duration="8829000" />
       <workItem from="1738941486260" duration="1212000" />
-      <workItem from="1738943022761" duration="2783000" />
+      <workItem from="1738943022761" duration="4048000" />
+      <workItem from="1738948646710" duration="2778000" />
+      <workItem from="1739116316335" duration="5684000" />
+      <workItem from="1739546042445" duration="8569000" />
+      <workItem from="1739560548310" duration="692000" />
+      <workItem from="1739640834551" duration="4778000" />
+      <workItem from="1739720539800" duration="7008000" />
+      <workItem from="1739787865901" duration="6886000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/Projeto2/Algorithm/BeamSearch.java</url>
+          <line>29</line>
+          <properties class="Projeto2.Algorithm.BeamSearch" method="Find_Solution_Citizen_BS">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

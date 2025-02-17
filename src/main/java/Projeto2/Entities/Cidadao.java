@@ -4,15 +4,9 @@ public class Cidadao extends Entity {
     private boolean chegouSupermercado;
     private static int totalCidadaos;
 
-    public Cidadao(int id, int avenida, int rua) {
-        super(id, avenida, rua);
-        this.chegouSupermercado = false;
-
-    }
-
     public Cidadao(int avenida, int rua) {
-        this(++totalCidadaos, avenida, rua);
-
+        super(avenida, rua);
+        this.chegouSupermercado = false;
     }
 
     public static int TotalCidadaos() {
@@ -33,6 +27,6 @@ public class Cidadao extends Entity {
 
     @Override
     public String toString() {
-        return "Cidadão " + getId() + " | Avenida: " + getAvenida() + " | Rua: " + getRua() + " | Chegou? " + chegouSupermercado;
+        return "Cidadão -> Avenida: " + getAvenida() + " | Rua: " + getRua() + " | Chegou? " + chegouSupermercado;
     }
 }

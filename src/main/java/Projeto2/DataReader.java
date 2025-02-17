@@ -19,7 +19,7 @@ public class DataReader {
     private ArrayList<Supermercado> supermercados;
     private ArrayList<Cidadao> cidadaos;
 
-    public DataReader(String fileName, ArrayList<Supermercado> supermercados, ArrayList<Cidadao> cidadaos) throws IOException {
+    public DataReader(String fileName, ArrayList<Supermercado> supermercados, ArrayList<Cidadao> cidadaos) {
         this.supermercados = supermercados;
 
         this.cidadaos = cidadaos;
@@ -27,7 +27,7 @@ public class DataReader {
         readFile(fileName);
     }
 
-    private void readFile(String fileName) throws IOException {
+    private void readFile(String fileName) {
         try{
             File file = new File(PATH_TO_FILE + fileName);
 
@@ -70,9 +70,15 @@ public class DataReader {
         }
     }
 
-    private void readSupermercados(BufferedReader br) throws IOException {
+    private void readSupermercados(BufferedReader br) {
         for (int i = 0; i < numSupermercados; i++) {
-            String[] line = br.readLine().split(" ");
+            String[] line = null;
+
+            try {
+                line = br.readLine().split(" ");
+            } catch (IOException e) {
+                throw new RuntimeException("ERRO: Não é possível ler a linha do ficheiro!");
+            }
 
             int avenida = Integer.parseInt(line[0]);
             int rua = Integer.parseInt(line[1]);
@@ -81,12 +87,18 @@ public class DataReader {
         }
     }
 
-    public ArrayList<Supermercado> getSupermercados() {
-        return supermercados;
+    public Supermercado getSupermercadoByCoords(int avenida, int rua) {
+        return supermercados.stream()
+                .filter(supermercado -> supermercado.getAvenida() == avenida && supermercado.getRua() == rua)
+                .findFirst()
+                .orElse(null);
     }
 
-    public ArrayList<Cidadao> getCidadaos() {
-        return cidadaos;
+    public Cidadao getCidadaoByCoords(int avenida, int rua) {
+        return cidadaos.stream()
+                .filter(cidadao -> cidadao.getAvenida() == avenida && cidadao.getRua() == rua)
+                .findFirst()
+                .orElse(null);
     }
 
     public int getAvenidas() {
