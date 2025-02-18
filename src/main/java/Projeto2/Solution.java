@@ -53,6 +53,7 @@ public class Solution {
         for (ArrayList<Cruzamento> caminho : caminhos) {
             if (caminho == null || (!caminho.isEmpty() && !caminho.get(caminho.size() - 1).isSupermercado())) {
                 return false;
+
             }
         }
         return true;
@@ -80,14 +81,40 @@ public class Solution {
     @Override
     public String toString() {
 
+        /*
         String coordenadas = "";
 
         for (int i = 0; i < this.caminhos.size(); i++) {
             coordenadas += "Cidadão " + i + ": " + this.caminhos.get(i) + "\n";
 
+        }// */
+
+        String solucao = "";
+
+        solucao += "{\n";
+
+        boolean isSupermercado = false;
+
+        for (ArrayList<Cruzamento> caminho : caminhos) {
+            solucao += "\t[[ ";
+            for (Cruzamento c : caminho) {
+                solucao += "(" + c.getAvenida() + ", " + c.getRua() + ") ";
+                isSupermercado = c.isSupermercado();
+            }
+
+            if (isSupermercado) {
+                solucao += "]]S \n";
+
+            }else {
+                solucao += "]] \n";
+
+            }
+
         }
 
-        return coordenadas;
+        solucao += "\n}";
+
+        return solucao;
 
     }
 

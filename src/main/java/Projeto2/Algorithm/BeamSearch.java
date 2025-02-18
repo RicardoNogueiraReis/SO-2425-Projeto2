@@ -19,6 +19,10 @@ public class BeamSearch {
     private ArrayList<Cidadao> cidadaos;
     private ArrayList<Supermercado> supermercados;
 
+    // Métricas
+    private long totalTime;
+    private int numCaminhosTerminados;
+
     public BeamSearch(int beamWidth, Graph<Cruzamento, Integer> cruzamentos, int maxTime, ArrayList<Cidadao> cidadaos, ArrayList<Supermercado> supermercados) {
         this.beamWidth = beamWidth;
         this.cruzamentos = cruzamentos;
@@ -36,6 +40,8 @@ public class BeamSearch {
 
         long startTime = System.currentTimeMillis();
 
+        // int numTotalIterations;
+
         while (elapsedTime(startTime) < maxTime && !beam.isEmpty()) {
             ArrayList<Solution> nextBeam = new ArrayList<>();
             ArrayList<Thread> threads = new ArrayList<>();
@@ -52,7 +58,11 @@ public class BeamSearch {
                 ArrayList<Solution> subBeam = new ArrayList<>(beam.subList(inicio, fim));
                 BeamSearchThread thread = new BeamSearchThread(subBeam, nextBeam, bestSolution, this, iteracoesThread);
                 threads.add(thread);
+            }
+
+            for (Thread thread : threads) {
                 thread.start();
+
             }
 
             for (Thread t : threads) {
@@ -75,6 +85,15 @@ public class BeamSearch {
                 beam = nextBeam;
             }
         }
+
+        this.totalTime = elapsedTime(startTime); // Tempo total da execução
+
+        // Métricas
+        //System.out.println("Número de cidadãos que chegaram ao supermercado: " + bestSolution.getNumeroDeCaminhosTerminados() + " (de " + cidadaos.size() + " cidadãos no total e com " + supermercados.size() + " supermercados)");
+        //System.out.println("Tempo total da execução: " + totalTime + " milisegundos" + " (" + (double) totalTime / 1000 + " segundos)\n");
+        // System.out.println("Número de iterações até encontrar a solução: " + BeamSearchThread.getTotalIteracoes() + "\n");
+
+        this.numCaminhosTerminados = bestSolution.getNumeroDeCaminhosTerminados();
 
         return bestSolution;
     }
@@ -110,7 +129,6 @@ public class BeamSearch {
                 Vertex<Cruzamento> ultimoNoVertex = encontrarVertex(ultimoNo);
 
                 if (ultimoNoVertex == null) {
-                    System.err.println("Erro: Cruzamento " + ultimoNo + " não encontrado no grafo.");
                     continue;
                 }
 
@@ -158,7 +176,7 @@ public class BeamSearch {
 
         for (int i = 0; i < cidadaos.size(); i++) {
             Cidadao c = cidadaos.get(i);
-            solucao.adicionarPasso(i, new Cruzamento(c.getAvenida(), c.getRua())); // Ponto inicial
+            solucao.adicionarPasso(i, new Cruzamento(c.getAvenida(), c.getRua()));
         }
 
         return solucao;
@@ -204,5 +222,12 @@ public class BeamSearch {
         return false; // Se passou todas as verificações, podemos expandir
     }
 
+    @Override
+    public String toString() {
+        System.out.println("Tempo: " + totalTime + " milisegundos");
+        System.out.println("Cidadãos na solução: " + numCaminhosTerminados + "/ C(" + cidadaos.size() + ") / S(" + supermercados.size() + ")");
+
+        return "";
+    }
 }
 

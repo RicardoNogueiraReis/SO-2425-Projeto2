@@ -3,6 +3,7 @@ package Projeto2;
 import Projeto2.Algorithm.BeamSearch;
 import Projeto2.Entities.*;
 
+import java.io.DataOutput;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,8 +12,7 @@ import java.util.Map;
 import com.brunomnsilva.smartgraph.graph.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) {
 
         /* Leitura de parâmetros */
         /* +++++++++++++++++++++ */
@@ -33,40 +33,56 @@ public class Main {
 
         }
 
+
         System.out.println(params);
+        System.out.println(" - - - - - ");
 
         /* Leitura de ficheiros */
         /* ++++++++++++++++++++ */
 
-        ArrayList<Cidadao> cidadaos = new ArrayList<>();
-        ArrayList<Supermercado> supermercados = new ArrayList<>();
+        ArrayList<Cidadao> cidadaos;
+        ArrayList<Supermercado> supermercados;
 
         DataReader dataReader;
 
-        dataReader = new DataReader(params.getNomeFicheiro(), supermercados, cidadaos);
+        Solution solution;
 
-        Graph<Cruzamento, Integer> cruzamentos = new GraphEdgeList<>();;
+        for (int i = -1; i < 10; i++) {
 
-        createCruzamentos( cruzamentos, dataReader.getAvenidas(), dataReader.getRuas(), cidadaos, supermercados);
+            Graph<Cruzamento, Integer> cruzamentos = new GraphEdgeList<>();
+            cidadaos = new ArrayList<>();
+            supermercados = new ArrayList<>();
+            dataReader = new DataReader(params.getNomeFicheiro(), supermercados, cidadaos);
+
+            createCruzamentos(cruzamentos, dataReader.getAvenidas(), dataReader.getRuas(), cidadaos, supermercados);
+
+            BeamSearch beamSearch = new BeamSearch(params.getLarguraFeixe(), cruzamentos, params.getMilisegundos(), cidadaos, supermercados);
+
+            solution = beamSearch.Find_Solution_Citizen_BS(params.getNumThreads(), params.getIteracoesThread());
+
+            if( i >= 0 ) {
+                System.out.println(i+1);
+                System.out.println(beamSearch);
+                System.out.println(solution);
+
+                System.out.println("\n++ =============================================== ++\n");
+
+            }
+
+        }
+
 
         //mostrarVizinhos(cruzamentos);
 
         // Mostrar as entidades nos cruzamentos
-        mostrarEntidadesNosCruzamentos(cruzamentos);
-        System.out.println();
+        //mostrarEntidadesNosCruzamentos(cruzamentos);
 
-        /* Algoritmo */
-
-        BeamSearch beamSearch = new BeamSearch(params.getLarguraFeixe(), cruzamentos, params.getMilisegundos(), cidadaos, supermercados);
-
-        Solution solution = beamSearch.Find_Solution_Citizen_BS(params.getNumThreads(), params.getIteracoesThread());
-
-        System.out.println(solution);
 
     }
 
     private static void createCruzamentos(Graph<Cruzamento, Integer> cruzamentos,
-                                          int numberOfAvenidas, int numberOfRuas,
+                                          int numberOfAvenidas,
+                                          int numberOfRuas,
                                           ArrayList<Cidadao> cidadaos,
                                           ArrayList<Supermercado> supermercados) {
         Map<String, Vertex<Cruzamento>> cruzamentoMap = new HashMap<>();

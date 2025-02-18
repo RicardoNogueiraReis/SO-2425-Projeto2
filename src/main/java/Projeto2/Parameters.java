@@ -10,8 +10,7 @@ public class Parameters {
     private int milisegundos;
     private int iteracoesThread;
 
-    public Parameters() {
-    }
+    public Parameters() { }
 
     public String getNomeFicheiro() {
         return nomeFicheiro;
@@ -93,7 +92,7 @@ public class Parameters {
         return "\nFicheiro: " + nomeFicheiro +
                "\nLargura do feixe: " + larguraFeixe +
                "\nNúmero de threads: " + numThreads +
-               "\nMilisegundos: " + milisegundos + " (" + milisegundos/1000 + " Segundos)" +
+               "\nMilisegundos: " + milisegundos + " (" + (double) milisegundos/1000 + " Segundos)" +
                "\nNúmero de iterações para cada thread: " + iteracoesThread + "\n";
     }
 }

@@ -1,11 +1,11 @@
 package Projeto2.Entities;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Cruzamento {
     private int avenida;
     private int rua;
+
     private ArrayList<Cidadao> cidadaos;
     private ArrayList<Supermercado> supermercados;
 
